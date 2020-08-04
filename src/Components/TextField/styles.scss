@@ -1,0 +1,18 @@
+@import '../../Assets/vars.scss';
+
+$trans-time: 350ms;
+
+.text-field {
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 240px;
+    border: 1px solid $brand-grey-300;
+    border-radius: 24px;
+    transition: border-color $trans-time, width $trans-time ease-in-out;
+    
+    &:focus {
+        width: 320px;
+        border-color: $brand-orange;
+    }
+}

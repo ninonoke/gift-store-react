@@ -1,0 +1,18 @@
+@import '../../../Assets/vars.scss';
+
+.nav-item{
+    font-size: 14px;
+    line-height: 140%;
+    margin-right: 80px;
+    cursor: pointer;
+    transition: color 0.35s;
+
+    &:nth-child(2),
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: $brand-orange;
+    }
+}

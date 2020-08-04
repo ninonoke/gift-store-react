@@ -1,0 +1,37 @@
+@import '../../Assets/vars.scss';
+
+$trans_time: 0.35s;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color:$brand-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-height;
+    padding: 0 32px 0 80px;
+    box-shadow: 10px 10px 15px rgba($brand-grey-300, 0.03);
+
+    &__logo {
+        width: 40px;
+    }
+
+    &__nav-item {
+        font-size: 18px;
+        line-height: 22px;
+        padding-right: 32px;
+        transition: color $trans_time;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &:hover {
+            color: $brand-orange;
+            cursor: pointer;
+        }
+    }
+}

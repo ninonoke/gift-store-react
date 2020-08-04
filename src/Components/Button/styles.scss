@@ -1,0 +1,60 @@
+@import '../../Assets/vars.scss';
+
+$trans_time: 0.35s;
+
+.button {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &--primary {
+        color: $brand-orange;
+        border: 1px solid $brand-orange;
+        transition: background-color $trans_time, color $trans_time;
+
+        &:hover {
+            background-color: $brand-orange;
+            color: $brand-white;
+        }
+    }
+
+    &--primary-dark {
+        display: inline-block;
+        background-color: $brand-grey-300;
+        border: none;
+        color: $brand-white;
+        margin-right: 16px;
+        transition: opacity $trans_time;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &--secondary {
+        background: $brand-orange;
+        border: none;
+        color: $brand-white;
+        transition: opacity $trans_time;
+        
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &--secondary-light {
+        display: inline-block;
+        color: $brand-grey-300;
+        border: 1px solid $brand-grey-300;
+        transition: background-color $trans_time, color $trans_time;
+    
+        &:hover {
+            background-color: $brand-grey-300;
+            color: $brand-white;
+        }
+    }
+}

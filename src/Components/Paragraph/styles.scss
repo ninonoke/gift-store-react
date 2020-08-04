@@ -1,0 +1,14 @@
+.paragraph {
+    text-align: center;
+    align-content: center;
+    padding: 88px 0;
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    
+    &__text {
+        font-size: 16px;
+    }
+}

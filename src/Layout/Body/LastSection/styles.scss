@@ -1,0 +1,64 @@
+@import '../../../Assets/vars.scss';
+
+.last-section {
+    background-color: $brand-white;
+    box-sizing: border-box;
+    text-align: center;
+
+    &__container {
+        display: inline-block;
+        width: 1144px;
+        
+        @media screen and (max-width: 1280px) {
+            width: 880px;
+        }
+    }
+
+    &__paragraph-wrapper {
+        display: flex;
+        padding: 40px 0;
+    }
+
+    &__image-text {
+        display: inline-flex;
+        justify-content: left;
+        align-items: center;
+        background-color: $brand-grey-300;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    &__image {
+        height: 370px;
+
+        @media screen and (max-width: 1280px) {
+            height: 320px;
+        }
+    }
+
+    &__text {
+        color: $brand-white;
+        height: 100%;
+        padding-left: 56px;
+        text-align: left;
+        padding-right: 24px;
+        align-items: center;
+    }
+
+    &__paragraph {
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 32px;
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+
+        @media screen and (max-width: 1280px) {
+            font-size: 24px;
+        }
+    }
+}
