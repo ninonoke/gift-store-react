@@ -15,7 +15,7 @@ function Button(props) {
 
 Button.propTypes = {
     children: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     type: PropTypes.oneOf(['primary', 'secondary', 'primary-dark', 'secondary-light']).isRequired,
     onClick: PropTypes.func.isRequired
 }

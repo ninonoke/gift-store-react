@@ -3,6 +3,7 @@ import './styles.scss'
 import Logo from '../../Assets/Logos/logo.png'
 import {NAV} from '../../Constants/navigation.js'
 import Button from '../../Components/Button/index.jsx'
+import {NavLink} from "react-router-dom";
 
 export default function Header() {
     return(
@@ -11,17 +12,19 @@ export default function Header() {
             <div className='header__nav'>
                 {NAV.map((item, index) => {
                     return(
-                        <a 
+                        <NavLink 
                             className='header__nav-item' 
-                            href='/'
+                            activeClassName='header__nav-item--active'
+                            to={item.route}
                             key={index}
+                            exact
                         >
-                            {item}
-                        </a>
+                            {item.name}
+                        </NavLink>
                     )
                 })}
             </div>
-            <Button>
+            <Button onClick={() => alert("hi")}>
                 Gift Finder
             </Button>
         </div>

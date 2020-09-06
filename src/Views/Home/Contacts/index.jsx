@@ -3,7 +3,7 @@ import './styles.scss'
 import Button from '../../../Components/Button/index.jsx'
 
 export default function Contacts() {
-    return(
+    return (
         <div className='contacts'>
             <div className='contacts__content'>
                 <div className='contacts__content-text'>
@@ -23,7 +23,6 @@ export default function Contacts() {
                     </Button>
                 </div>
             </div>
-
         </div>
     )
 }

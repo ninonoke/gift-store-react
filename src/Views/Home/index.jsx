@@ -5,9 +5,9 @@ import Cards from './Cards/index.jsx'
 import Contacts from './Contacts'
 import LastSection from './LastSection'
 
-export default function Body () {
+export default function Home () {
     return (
-        <div className='body'>
+        <div className='home'>
             <MainSection />
             <Cards />
             <Contacts />

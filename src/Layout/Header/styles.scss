@@ -24,6 +24,7 @@ $trans_time: 0.35s;
         line-height: 22px;
         padding-right: 32px;
         transition: color $trans_time;
+        cursor: pointer;
 
         &:last-child {
             padding-right: 0;
@@ -31,7 +32,10 @@ $trans_time: 0.35s;
 
         &:hover {
             color: $brand-orange;
-            cursor: pointer;
+        }
+        
+        &--active {
+            color: $brand-orange;
         }
     }
 }

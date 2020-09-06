@@ -6,6 +6,12 @@
     height: 408px;
     text-align: center;
 
+    &:hover {
+        .footer__line {
+            transform: scaleX(1.4);
+        }
+    }
+
     &__nav-wrapper {
         width: 100%;
         text-align: center;
@@ -22,10 +28,11 @@
 
     &__line {
         margin: 40px 0;
-        width: 1000px;
+        width: 720px;
         height: 1px;
         background-color: $brand-grey-300;
         display: inline-block;
+        transition: transform 400ms ease-in-out;
     }
 
     &__icons {

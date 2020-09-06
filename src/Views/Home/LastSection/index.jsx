@@ -4,7 +4,6 @@ import Paragraph from '../../../Components/Paragraph/index.jsx'
 import LastSectionParagraph from '../../../Components/LastSectionParagraph/index.jsx'
 import Media from '../../../Assets/Images/Media.png'
 
-
 export default function LastSection() {
     return(
         <div className='last-section'>
@@ -15,7 +14,8 @@ export default function LastSection() {
                 />
                 <div className='last-section__wrapper'>
                     <div className='last-section__image-text'>
-                            <img className='last-section__image'
+                            <img
+                                className='last-section__image'
                                 src={Media}
                             />
                         <div className='last-section__text'>
@@ -23,7 +23,7 @@ export default function LastSection() {
                                 mr. john doe
                             </div>
                             <div className='last-section__title'>
-                                the best way to wish your wife
+                                the best gifts for your love
                             </div>
                             <div className='last-section__paragraph'>
                                 read more
@@ -33,7 +33,7 @@ export default function LastSection() {
                 </div>
                 <div className='last-section__paragraph-wrapper'>
                     <LastSectionParagraph
-                        title='Database to find the gifts for your girlfriend'
+                        title='Database to find the gifts'
                         text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...'
                     />
                     <LastSectionParagraph

@@ -42,17 +42,7 @@ export default function Footer(){
                 })}
             </div>
             <div className='footer__copywrite'>
-                © 2010 — 2020 &nbsp; &nbsp;\
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                 Privacy — Terms
+                © 2010 — 2020 &nbsp; &nbsp;  Privacy — Terms
             </div>
         </div>
     )

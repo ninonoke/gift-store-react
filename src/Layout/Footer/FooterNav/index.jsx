@@ -1,19 +1,22 @@
 import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import './styles.scss'
+import {
+  Link
+} from "react-router-dom";
 
 function FooterNav (props) {
     return (
         <Fragment>
             {props.nav.map((item, index) => {
                 return (
-                    <a
+                    <Link
                         className='nav-item'
-                        href='/'
+                        to={item.route}
                         key={index}
                     >
-                        {item}
-                    </a>
+                        {item.name}
+                    </Link>
                 )
             })}
         </Fragment>
@@ -21,7 +24,12 @@ function FooterNav (props) {
 }
 
 FooterNav.propTypes = {
-    nav: PropTypes.array.isRequired,
+    nav: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            route: PropTypes.string.isRequired
+        }).isRequired
+    ).isRequired,
 }
 
 export default FooterNav

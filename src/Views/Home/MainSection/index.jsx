@@ -9,10 +9,10 @@ export default function MainSection() {
                 <div className='main-section__container-one'>
                     <div className='main-section__container-inner'>
                         <div className='main-section__one-title'>
-                            Find a gift for your wife or girlfriend
+                            Find a gift for your loved one
                         </div>
                         <div className='main-section__one-paragraph'>
-                            Straggling to find a gift for your wife or girlfriend? No problem!
+                            Straggling to find a gift for your loved one? No problem!
                         </div>
                        <Button type='secondary'>
                            Find gift now
@@ -29,7 +29,7 @@ export default function MainSection() {
                             How we work
                         </div>
                         <div className='main-section__four-paragraph'>
-                            We've actually already asked hundreds of women what they want, and made a database with the results. All you have to do is take our short survey that only takes seconds, and our proprietary algorithm will match you with a few perfect gift options.
+                            All you have to do is take our short survey that only takes seconds, and our proprietary algorithm will match you with a few perfect gift options.
                         </div>
                         <Button>
                             learn more
