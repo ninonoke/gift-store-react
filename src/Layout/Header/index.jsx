@@ -8,7 +8,11 @@ import {NavLink} from "react-router-dom";
 export default function Header() {
     return(
         <div className='header'>
-            <img className='header__logo' src={Logo} alt="Logotype" />
+            <img
+                className='header__logo'
+                src={Logo}
+                alt="Logotype"
+            />
             <div className='header__nav'>
                 {NAV.map((item, index) => {
                     return(

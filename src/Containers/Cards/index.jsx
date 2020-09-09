@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import './styles.scss'
-import {CARDS} from '../../../Constants/cards.js'
-import Paragraph from '../../../Components/Paragraph/index.jsx'
-import Modal from '../../../Components/Modal/index.jsx'
+import {CARDS} from '../../Constants/cards.js'
+import Paragraph from '../../Components/Paragraph/index.jsx'
+import Modal from '../../Components/Modal/index.jsx'
 
 export default function Cards() {
     const [modalImage, setModalImage] = useState(null)

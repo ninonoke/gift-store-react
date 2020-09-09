@@ -4,6 +4,12 @@ import './index.css';
 import App from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 
+(async () => {
+  if (!("scrollBehavior" in document.documentElement.style)) {
+    await import("scroll-behavior-polyfill");
+  }
+})();
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

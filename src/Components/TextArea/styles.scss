@@ -2,14 +2,16 @@
 
 $trans-time: 350ms;
 
-.text-field {
+.text-area {
     padding: 8px 24px;
     font-size: 16px;
     line-height: 20px;
     width: 240px;
+    height: 88px;
     border: 1px solid $brand-grey-300;
     border-radius: 8px;
     transition: border-color $trans-time, width $trans-time ease-in-out;
+    background: transparent;
     
     &:focus {
         width: 320px;

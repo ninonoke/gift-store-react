@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './styles.scss'
 import Header from './Header/index.jsx'
 import Footer from './Footer/index.jsx'
@@ -9,12 +9,20 @@ import Services from '../Views/Services/index.jsx'
 import MainModal from '../Layout/MainModal/index.jsx'
 import {
     Switch,
-    Route
-} from "react-router-dom";
+    Route,
+    useLocation
+} from "react-router-dom"; 
 
 
 export default function Layout() {
     const [modalOpen, setModalOpen] = useState(true)
+    const location = useLocation()
+    
+    useEffect(() => {
+        if (window.scrollY > 0) {
+            window.scrollTo(0,0)
+        }
+    }, [location.pathname])
 
     return (
         <div className='layout'>

@@ -3,3 +3,7 @@ $brand-white: #FFFFFF;
 $brand-black: #000000;
 $brand-grey-300: #231F20;
 $header-height: 124px;
+
+:export {
+    headerHeight: $header-height;
+}
