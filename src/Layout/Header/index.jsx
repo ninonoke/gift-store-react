@@ -4,15 +4,27 @@ import Logo from '../../Assets/Logos/logo.png'
 import {NAV} from '../../Constants/navigation.js'
 import Button from '../../Components/Button/index.jsx'
 import {NavLink} from "react-router-dom";
+import Home from '../../Views/Home'
+import {
+    useHistory
+   } from "react-router-dom"; 
 
 export default function Header() {
+    const history = useHistory();
+    function HandlClick(route) {
+        history.push(route)
+    }
     return(
         <div className='header'>
-            <img
-                className='header__logo'
-                src={Logo}
-                alt="Logotype"
-            />
+            <NavLink
+                 to='/'
+            >
+                <img
+                    className='header__logo'
+                    src={Logo}
+                    alt="Logotype"
+                />
+            </NavLink>
             <div className='header__nav'>
                 {NAV.map((item, index) => {
                     return(
@@ -28,7 +40,7 @@ export default function Header() {
                     )
                 })}
             </div>
-            <Button onClick={() => alert("hi")}>
+            <Button onClick={() => HandlClick('/services')}>
                 Gift Finder
             </Button>
         </div>

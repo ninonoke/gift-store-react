@@ -1,8 +1,17 @@
 import React from 'react'
 import './styles.scss'
 import Button from '../../../Components/Button/index.jsx'
+import {
+    useHistory
+   } from "react-router-dom"; 
 
 export default function Contacts() {
+    
+    const history = useHistory();
+    function HandlClick(route) {
+        history.push(route)
+    }
+
     return (
         <div className='contacts'>
             <div className='contacts__content'>
@@ -15,10 +24,16 @@ export default function Contacts() {
                     </div>  
                 </div>
                 <div className='contacts__content-buttons'>
-                    <Button type='primary-dark'>
+                    <Button 
+                        type='primary-dark'
+                        onClick={() => HandlClick('/services')}
+                    >
                         find gift now
                     </Button>
-                    <Button type='secondary-light'>
+                    <Button
+                        type='secondary-light'
+                        onClick={() => HandlClick('/about-us')}
+                    >
                         how it works
                     </Button>
                 </div>

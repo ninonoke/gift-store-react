@@ -1,11 +1,18 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import './styles.scss'
-import {CARDS} from '../../Constants/cards.js'
+import { connect } from 'react-redux'
+import { fetchCategories} from '../../actions'
 import Paragraph from '../../Components/Paragraph/index.jsx'
 import Modal from '../../Components/Modal/index.jsx'
+import PropTypes from 'prop-types'
+import {getCategories} from '../../selectors'
 
-export default function Cards() {
+function Cards(props) {
     const [modalImage, setModalImage] = useState(null)
+
+    useEffect(() => {
+        props.fetchCategories()
+    }, [])
 
     return(
         <div className='cards'>
@@ -15,7 +22,7 @@ export default function Cards() {
             />
 
             <div className='cards__container'>
-                {CARDS.map((item, index) => {
+                {props.categories.map((item, index) => {
                     return(
                        <div 
                             className='cards__card'
@@ -54,3 +61,23 @@ export default function Cards() {
         </div>
     )
 }
+
+Cards.propTypes = {
+    categories: PropTypes.arrayOf(
+        PropTypes.shape({
+            image: PropTypes.string,
+            label: PropTypes.string
+        })
+    ),
+    fetchCategories: PropTypes.func.isRequired
+}
+
+const mapStateToProps = state => ({
+    categories: getCategories(state)
+})
+  
+const mapDispatchToProps = dispatch => ({
+    fetchCategories: () => dispatch(fetchCategories())
+})
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Cards)
